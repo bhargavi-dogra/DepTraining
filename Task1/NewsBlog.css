@@ -1,6 +1,6 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0%;
+    padding: 0%;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
   header {
     background-color:#273852;
     color:white;
-    padding:50px;
+    padding:3%;
   }
   .headerbox{
     margin: 0 auto;
@@ -24,7 +24,7 @@ body {
   }
 
 .w3-container{
-   height:250px;
+   height:290px;
 
 }
 
@@ -37,8 +37,8 @@ body {
 
   nav {
     float: left;
-    width: 10%;
-    height: 200px;
+    width: 200px;
+    height: 250px;
     background: #ccc;
     padding: 20px;
   }
@@ -46,10 +46,10 @@ body {
   .readingsection {
     float: left;
     padding: 20px;
-    padding-top: 0%;
+    padding-top: 0;
     width: 60%;
     background-color: white;
-    height: 200px;
+    height: 270px;
     display:flex;
     flex-direction: column;
   }
@@ -88,16 +88,20 @@ body {
     background: #c76156;
     color: #ffffff !important;
     font-weight: 100;
-    padding: 10px;
+    padding: 12px;
     display: inline-block;
     }
 
     
   
   @media (max-width: 600px) {
-    nav, .readingsection {
+    nav, .readingsection ,.w3-container{
         width: 100%;
-        height: auto;
+        height: 350px;
+      }
+      .flex-container{
+        flex-direction: column;
+        align-items: center;
       }
   }
   footer {
@@ -122,6 +126,8 @@ body {
   }
   .abd{
     margin:2px;
+    height:200px;
+    overflow: hidden;
   }
   .indent{
     margin:5px;
@@ -132,4 +138,11 @@ body {
   {
     text-align: center; 
     color:#273852;
+  }
+p{
+  font-family: 'Kanit', sans-serif;
+}
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Kanit', sans-serif;
+    color: #273852;
   }
