@@ -1,12 +1,8 @@
 /* PROBLEM STATEMENT - Printing Array elements with Comma delimiters
 
-Input: Array of elements
+http://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
 
-["h","o","l","a"]
-
-Output: String with comma delimited elements of the array in th same order.
-
-"h,o,l,a"    */
+    */
 
 SOLUTION
 

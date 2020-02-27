@@ -1,11 +1,6 @@
 /* PROBLEM STATEMENT : Opposite number
-Very simple, given a number, find its opposite.
-
-Examples:
-
-1: -1
-14: -14
--34: 34    */
+ http://www.codewars.com/kata/opposite-number
+*/
 
 
 SOLUTION
