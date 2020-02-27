@@ -9,16 +9,17 @@ SOLUTION
 function rentalCarCost(d) {
   // Your solution here
 var total;
+var days = d;
 
-total=d*40;
+total = days*40;
 
-if(d>=7)
+if(days >= 7)
 {
-total=total-50;
+total = total-50;
 }
-else if((d>=3)&&(d<7))
+else if((days >= 3)&&(days < 7))
 {
-total=total-20;
+total = total-20;
 }
   return total;
 }
