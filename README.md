@@ -14,4 +14,17 @@ Tasks :
 
 4)Transportation on vacation - http://www.codewars.com/kata/transportation-on-vacation
 
- 
+
+ Session - 2 (Date : 26-02-2020)
+
+Topic Covered :JavaScript Core
+
+Tasks :
+
+1)Calculating with Functions - http://www.codewars.com/kata/calculating-with-functions
+
+2)Get the Middle Character - http://www.codewars.com/kata/get-the-middle-character
+
+3)Partition On - http://www.codewars.com/kata/partition-on
+
+4)Word Count - http://www.codewars.com/kata/word-count

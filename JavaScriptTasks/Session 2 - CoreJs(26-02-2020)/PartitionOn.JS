@@ -1,40 +1,38 @@
-PROBLEM STATEMENT :Partition On
+/*PROBLEM STATEMENT :Partition On
 
-http://www.codewars.com/kata/partition-on 
+http://www.codewars.com/kata/partition-on */
 
 SOLUTION:
 
 function partitionOn(pred, items) {
- var result=[],second=[];
- var len=items.length;
- var r=0,a=0,b=0;
- for(var i=0;i<len;i++)
+ var first=[],second=[];
+ var arrayLength=items.length;
+ var resultIndex=0,counter1=0,counter2=0;
+ for(var i=0;i<arrayLength;i++)
  {
  if(pred(items[i]))
  {
-second[b]=items[i];
-b++;
+second[counter2]=items[i];
+counter2++;
+ }else{
+    first[counter1]=items[i];
+    counter1++;
+resultIndex=counter1;
  }
- else
+ }
+ for(var j=0;j<counter2;j++)
  {
-result[a]=items[i];
-a++;
-r=a;
- }
- }
- for(var j=0;j<b;j++)
- {
- result[a]=second[j];
- a++;
+    first[counter1]=second[j];
+    counter1++;
  }
 
- for(var k=0;k<len;k++)
+ for(var k=0;k<arrayLength;k++)
  {
- items[k]=result[k];
+ items[k]=first[k];
  }
 
 
- return r;
+ return resultIndex;
  
 
 }
@@ -49,25 +47,24 @@ r=a;
 
 
 function partitionOn(pred, items) {
- var result=[],second=[];
  var len=items.length;
- var r=0,a=0,b=0;
+ var count=0;
  for(var i=0;i<len/2+1;i++)
  {
  if(pred(items[i]))
  {
 items.splice(len,0,items[i]);
 items.splice(i,1);
-a++;
+count++;
  }
  else
  {
-items.splice(a,0);
-a++;
+items.splice(count,0);
+count++;
  }
  }
  console.log(items);
- return a-1;
+ return count-1;
  
 
 }

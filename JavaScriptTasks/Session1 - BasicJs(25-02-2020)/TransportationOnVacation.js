@@ -1,13 +1,12 @@
-/* PROBLEM STATEMENT - Transportation on vacation
+ 
+ /*PROBLEM STATEMENT - Transportation on vacation
+http://www.codewars.com/kata/transportation-on-vacation   */
 
-http://www.codewars.com/kata/transportation-on-vacation
-/*
 
 
 SOLUTION
 
 function rentalCarCost(d) {
-  // Your solution here
 var total;
 var days = d;
 

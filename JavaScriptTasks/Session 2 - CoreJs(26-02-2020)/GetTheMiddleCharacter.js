@@ -9,18 +9,17 @@ SOLUTION
 
 function getMiddle(s)
 {
-  //Code goes here!
-  
-  var str=getMiddleString(s,s.length);
-  return str;
+ 
+  var resultString=getMiddleString(s,s.length);
+  return resultString;
 }
 
-function  getMiddleString( s, l)
+function  getMiddleString( s, stringLength)
 {
-if(l==1||l==2)
+if(stringLength==1||stringLength==2)
 return s;
 else{
-var str=s.substring(1,l-1);
-return getMiddleString(str,l-2);
+var subString=s.substring(1,stringLength-1);
+return getMiddleString(subString,stringLength-2);
 }
 }
