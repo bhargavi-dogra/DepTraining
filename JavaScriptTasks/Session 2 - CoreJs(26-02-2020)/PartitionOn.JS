@@ -5,34 +5,46 @@ http://www.codewars.com/kata/partition-on */
 SOLUTION:
 
 function partitionOn(pred, items) {
- var first=[],second=[];
- var arrayLength=items.length;
- var resultIndex=0,counter1=0,counter2=0;
- for(var i=0;i<arrayLength;i++)
- {
- if(pred(items[i]))
- {
-second[counter2]=items[i];
-counter2++;
- }else{
-    first[counter1]=items[i];
-    counter1++;
-resultIndex=counter1;
- }
- }
- for(var j=0;j<counter2;j++)
- {
-    first[counter1]=second[j];
-    counter1++;
- }
+//  var first=[],second=[];
+//  var arrayLength=items.length;
+//  var resultIndex=0,counter1=0,counter2=0;
+//  for(var i=0;i<arrayLength;i++)
+//  {
+//  if(pred(items[i]))
+//  {
+// second[counter2]=items[i];
+// counter2++;
+//  }else{
+//     first[counter1]=items[i];
+//     counter1++;
+// resultIndex=counter1;
+//  }
+//  }
 
- for(var k=0;k<arrayLength;k++)
- {
- items[k]=first[k];
- }
+function partitionOn(pred, items) {
 
-
- return resultIndex;
+   var trueArray = items.filter((x) => pred(x)); 
+   
+   var falseArray = items.filter((x) => !pred(x));
+   
+   
+   //  for(var j=0;j<counter2;j++)
+   //  {
+   //     first[counter1]=second[j];
+   //     counter1++;
+   //  }
+   
+   //  for(var k=0;k<arrayLength;k++)
+   //  {
+   //  items[k]=first[k];
+   //  }
+   var item=falseArray.concat(trueArray)
+   items.length=0;
+   items.push(...item);
+   
+    return falseArray.length;
+   
+   }
  
 
 }
