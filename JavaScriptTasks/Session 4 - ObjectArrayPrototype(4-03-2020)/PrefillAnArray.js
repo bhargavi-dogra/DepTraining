@@ -4,45 +4,22 @@
 
 // SOLUTION:
 
+  let Counter = 0 ;
+ let Sum = 0 ;
+ 
+ function Cat(name, weight) {
 
-var Cat = (function () {
-  // ... your code here.
-  var averageweight = 0;
-  var count = 0;
-
-  return function Cat(name, weight) {
-    this.name = name;
-    this.weight = weight;
-    count++;
-    this.averageWeight = function () {
-
-      return averageweight = (averageweight + weight) / 2;
-
-    };
-
-
-  }());
-
-
-
-
-
-  // Let's make a Cat constructor!
-  // Let's make a Cat constructor!
-  function Cat(name, weight) {
-
-    if (name === undefined || weight === undefined) {
+    if (typeof name === 'undefined' || typeof weight === 'undefined') {
       throw new TypeError("Invalid");
     }
-    Cat.Counter = 0;
-    Cat.Sum = 0;
-    if (Cat.Counter == 0) {
-      Cat.Sum = weight;
-      Cat.Counter++;
+
+    if (Counter === 0) {
+      Sum = weight;
+      Counter++;
     }
     else {
-      Cat.Sum += weight;
-      Cat.Counter++;
+      Sum += weight;
+      Counter++;
     }
 
     
@@ -56,16 +33,12 @@ var Cat = (function () {
     Object.defineProperty(this, 'weight', {
       get() { return weight; },
       set(newWeight) {
-        Cat.Sum -= weight;
+        Sum -= weight;
         weight = newWeight;
-        Cat.Sum += weight;
+        Sum += weight;
       },
       configurable: false
     });
-
-    Object.defineProperty(Cat, 'averageWeight', {
-      value: function () {
-        return Cat.Sum / Cat.Counter;
-      }
-    });
 }
+
+Cat.averageWeight = function(){  return Sum / Counter; }
