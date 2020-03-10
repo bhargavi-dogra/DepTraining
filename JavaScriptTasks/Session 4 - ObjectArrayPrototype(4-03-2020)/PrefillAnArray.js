@@ -1,6 +1,6 @@
 // PROBLEM STATEMENT :Partition On
 
-// http://www.codewars.com/kata/a-function-within-a-function 
+// http://www.codewars.com/kata/using-closures-to-share-class-state 
 
 // SOLUTION:
 
