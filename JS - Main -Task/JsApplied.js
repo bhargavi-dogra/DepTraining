@@ -17,6 +17,8 @@ var maxRes = 15;
     
   function myPlan(response){
     console.log(response);
+
+
           for (var i=0; i<3;i++){
       
            var videoID=response.items[i].id.videoId;
@@ -30,31 +32,23 @@ var maxRes = 15;
       //     document.getElementById('list1a').innerHTML += links ;
       //     }
       // }
+
            let mainDiv =document.querySelector('#list1a');
           let div = document.createElement('div');
           div.classList.add('container');
-          let div1 = document.createElement('div');
-          div1.classList.add('box');
-          div.appendChild(div1);
           let img = document.createElement('img');
-          let imsource=response.items[i].snippet.thumbnails.high.url;
+          let imsource=response.items[i].snippet.thumbnails.medium.url;
              img.setAttribute('src',imsource);
-           div1.appendChild(img);
-
-           let div2 = document.createElement('div');
-          div2.classList.add('box1');
-          div.appendChild(div2);
+           div.appendChild(img);
           let text1 = document.createTextNode(title);
-          div.appendChild(text1);
-
-
-        
-          // let div1 = document.createElement('div');
-          // div1.classList.add('box1');
-          // div2.appendChild(div1);
+      //     div.appendChild(text1);
+          let a = document.createElement('a');
+          var link = document.createTextNode(title); 
+          a.href = "https://www.youtube.com/watch?v="+videoID;  
+          a.appendChild(link);
+          div.appendChild(a);
           mainDiv.appendChild(div);
           }
-          // document.getElementById('list1a').innerHTML += links ;
     
     }
 
