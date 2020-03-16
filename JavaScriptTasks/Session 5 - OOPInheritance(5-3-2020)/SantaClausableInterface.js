@@ -3,14 +3,37 @@
 // http://www.codewars.com/kata/santaClausable-interface
 // SOLUTION:
 
-  const santa = {
-    sayHoHoHo: function() { console.log('Ho Ho Ho!') },
-    distributeGifts: function() { console.log('Gifts for all!'); },
-    goDownTheChimney: function() { console.log('*whoosh*'); }
-};
-
-
+ 
 function isSantaClausable(obj) {
+
+  const condition1 =  typeof obj['sayHoHoHo'] == 'function';
+   const condition2 =  typeof obj['distributeGifts'] == 'function';
+    const condition3 = typeof obj['goDownTheChimney'] == 'function';
+
+  
+  if((condition1 === true && condition2 === true && condition3 ===true))
+  {
+  return true;
+  }
+  return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function isSantaClausable(obj) {
   // TODO
   const condition1 = obj.hasOwnProperty('sayHoHoHo');
    const condition2 = obj.hasOwnProperty('distributeGifts');
@@ -24,4 +47,4 @@ function isSantaClausable(obj) {
   return true;
   }
   return false;
-}
+} */
