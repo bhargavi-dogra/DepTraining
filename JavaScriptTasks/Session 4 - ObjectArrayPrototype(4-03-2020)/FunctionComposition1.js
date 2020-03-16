@@ -1,8 +1,8 @@
-Problem Statement :Function composition1
 
-link :https://www.codewars.com/kata/function-composition-1
 
-Solution :
+//link :http://www.codewars.com/kata/function-composition-1
+
+//Solution :
 
 const compose = (...fns) => input => fns.reduceRight((mem, fn) => fn(mem), input)
 

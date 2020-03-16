@@ -1,6 +1,6 @@
 // PROBLEM STATEMENT :SantaClausable Interface
 
-// http://www.codewars.com/kata/santaClausable-interface
+// http://www.codewars.com/kata/santaclausable-interface
 // SOLUTION:
 
   const santa = {

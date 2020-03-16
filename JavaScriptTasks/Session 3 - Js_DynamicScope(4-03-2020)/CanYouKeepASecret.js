@@ -6,16 +6,16 @@
 
 function createSecretHolder(secret) {
 
+  let SecretKey = secret ;
+  
   var obj = {
   
-  SecretKey : secret ,
-  
   getSecret :function () { 
-      return obj.SecretKey;
+      return SecretKey;
     }
    ,
    setSecret :function (x) { 
-      obj.SecretKey= x;
+      SecretKey= x;
         }
     }
     return obj;

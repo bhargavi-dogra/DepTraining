@@ -1,13 +1,13 @@
 // PROBLEM STATEMENT :Partition On
 
-// http://www.codewars.com/kata/a-function-within-a-function 
+// http://www.codewars.com/kata/prefill-an-array 
 
 // SOLUTION:
 
 function prefill(n, v) {
   
     let ar=[];
-    if(n == 0 || n == '0')
+    if(n === 0 || n === '0')
     return ar;
     
     
