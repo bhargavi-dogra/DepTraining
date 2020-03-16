@@ -1,15 +1,6 @@
 # DepTraining
 
 
-HTML  & CSS TASKS
- 
-     1)Designing a News Blog
-     2)Designing Chess Board
-    3)Designing Inintial letter of your name
-
-
-
-
 
 JAVASCRIPT TASKS :
 
@@ -71,7 +62,7 @@ Tasks :
 
 
 
-JAVASCRIPT MAIN  TASK :
+JAVASCRIPT  JS MAIN  TASK :
 
 
 Youtube Search 
