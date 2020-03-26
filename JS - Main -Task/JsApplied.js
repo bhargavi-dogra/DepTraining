@@ -3,7 +3,7 @@
 const youTuberSearchHelper = function fn() {
       var maxRes = 15; var counter = 0; var data = [];
       var token = '';
-      var email = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=' + maxRes + '&order=viewCount&key=AIzaSyCx86o-bJlVLK9abS8xAwqdPzTm6HFpYsg&q=';
+      var email = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=' + maxRes + '&order=viewCount&key=*****google_api_key*****&q=';
 
       var submitButton = document.getElementById('searchBtn');
       submitButton.addEventListener('click', searchQ);
