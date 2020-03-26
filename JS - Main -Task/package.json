@@ -1,0 +1,26 @@
+{
+  "name": "youtubepackage",
+  "version": "1.0.0",
+  "description": "youtubetask",
+  "main": "fetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "prettier": "2.0.2"
+  },
+  "dependencies": {
+    "jasmine": "^3.5.0",
+    "jasmine-core": "^3.5.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^3.1.1",
+    "karma": "^4.4.1"
+  }
+}
