@@ -1,0 +1,16 @@
+.formclass{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formrow{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonrow{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
