@@ -84,7 +84,7 @@ function router(nav){
           });
         }
       });
-   
+ 
       return authRouter;
 }
 

@@ -1,9 +1,12 @@
 const ghash = require('./hash-generation.js');
 
 const fs = require("fs");
-const path = fs.readdirSync("./utils");
+const paths = fs.readdirSync("./utils");
+const path = require("path");
 //TODO check if utils is path or directory ?
-var stats = fs.statSync("./utils");
+console.log(process.argv);
+const [, , directoryname] = process.argv;
+var stats = fs.statSync(path.join('./',directoryname));
 console.log('Is utlis a file or directory ?');
 console.log('is file ? ' + stats.isFile());
 console.log('is directory ? ' + stats.isDirectory());
@@ -13,33 +16,27 @@ console.log('is directory ? ' + stats.isDirectory());
 // if you find a directory inside a path you go read recursively
 
 console.log('All files and Directory names listed : ');
-async function print(path) {
-    const dir = await fs.promises.opendir(path);
+async function printDirectoryAndFileNames(p) {
+    const dir = await fs.promises.opendir(p);
     for await (const dirent of dir) {
 
         if (dirent.isDirectory()) {
             //recursively calling to print file names inside directory
             console.log(' directory  ' + dirent.name);
-            print(path + '/' + dirent.name.toString()).catch(console.error);
+            printDirectoryAndFileNames(path.join(p,'/' , dirent.name.toString())).catch(console.error);
+                   //    printDirectoryAndFileNames(path.join("/",dirent.name.toString())).catch(console.error);
+
         }
         else {
-            console.log('dirctory :' + path + '  file name :  ' + dirent.name);
+            console.log('dirctory :' + p + '  file name :  ' + dirent.name);
 
 
-            //reading all the file contents to console
-            fs.readFile((path + '/' + dirent.name.toString()), 'utf8', (err, data) => {
-                if (err) {
-                    console.error(err)
-                    return
-                }
-                console.log(data)
-            })
             //generating hash sha1 and md5 codes and writing to readme-main.md
-            ghash.genhash(path + '/' + dirent.name);
+            ghash.genhash(path.join(p , '/' , dirent.name));
 
         }
     }
 }
-print('./utils').catch(console.error);
+printDirectoryAndFileNames('./utils').catch(console.error);
 
 

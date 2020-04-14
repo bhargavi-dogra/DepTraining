@@ -3,6 +3,7 @@
       <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
       <link rel="stylesheet" href ="/css/styles.css">
+     
 </head>
 <body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -26,7 +27,7 @@
        </ul>
        <ul class="nav navbar-right navbar-nav">
          <li class="dropdown">
-           <a href="./logout" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-log-out">Logout</i></a>
+           <a href="/auth/logout" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-log-out">Logout</i></a>
            
          </li>
        </ul>
@@ -67,7 +68,7 @@
  <div class="container">
    <div class="row">
      
-     <div class="col-md-12"> 
+     <div class="col-md-15"> 
        
        <div class="panel">
          <div class="panel-body">
@@ -77,9 +78,9 @@
            <!--/stories-->
            <div class="row" style="display: flex; justify-content:center;">    
             <br>
-            <div class="col-md-10 col-sm-10 text-center"style="border:5px solid #efefef;border-radius: 10px;background-color: #efefef;">
-            Sign In
-            <form name="addPost" action="/singlepost" method="post">
+            <div class="col-md-30 col-sm-10 text-center"style="border:5px solid #efefef;border-radius: 10px;background-color: #efefef;">
+            Post your Thought!!
+            <form name="addPost" action="/admin/addpost" method="post">
              Post Id :<input name="id" id="id"/>
              UserName: <input name="username" id="username"/><br/>
              Post Title: <input name="title" id="title"/> <br/>

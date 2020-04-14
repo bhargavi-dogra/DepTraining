@@ -21,7 +21,7 @@ app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended :false}));
 app.use(cookieParser());;
-app.use(session({secret: 'posts'}));
+app.use(session({secret: 'mypostsapp'}));
 
 
 
@@ -47,7 +47,7 @@ app.use('/auth',authRouter);
 app.get('/', (req, res)=>{
     res.render('index',{
         nav :[{link:'/posts',title:'posts'},
-        {link:'/users',title:'users'}],
+        {link:'/admin/addpost',title:'addpost'}],
         title:'Posts App'
     });
 });

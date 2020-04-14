@@ -1,9 +1,9 @@
 const fs = require('fs');
+const crypto = require('crypto');
 var wstream = fs.createWriteStream('readme-main.md');
 
-function genhash(filename) {
-    const crypto = require('crypto');
 
+function genhash(filename) {
     const hash = crypto.createHash('sha1');
     const hashMd = crypto.createHash('md5');
     const input = fs.createReadStream(filename);

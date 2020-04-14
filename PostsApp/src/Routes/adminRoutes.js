@@ -35,7 +35,25 @@ function routers(nav)
 {
 
 
-    adminRouter.route('./addpost')
+    adminRouter.route('/addpost')
+    .all((req,res,next)=>{
+      if(req.user){
+        next();
+      }else{
+        res.redirect('/');
+      }
+    }) .get((req,res)=>{
+      console.log(req.user);
+      const userdata =req.user;
+
+      
+    //  res.json(req.user);
+    res.render('addpost', {
+      nav,
+      title: 'Posts App',
+      userdata
+  });
+})
       .post((req,res)=>{
     const {id,title,content,username,active} = req.body;
     const url = 'mongodb://localhost:27017';
@@ -51,10 +69,8 @@ function routers(nav)
            const col = db.collection('posts');
            const post = {id,title,content,username,active};
            const results = await col.insertOne(post);
-           debug(results);
-            
-           
-            res.redirect('/auth/posts');
+           debug(results);          
+           debug('Congratulations! You have Successfully posted your thought!');
           
 
         }catch(err){
@@ -65,6 +81,7 @@ function routers(nav)
           debug(req.body);
           //create user
         // res.json(req.body);
+
       });
 
 
