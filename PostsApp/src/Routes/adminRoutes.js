@@ -3,6 +3,8 @@ const { MongoClient } = require('mongodb');
 const debug = require('debug')('app:adminRoutes');
 const passport = require('passport');
 const adminRouter = express.Router();
+const { url , dbName} = require('../config/dbconfig');
+
 
 const posts =[{
     id:'1',
@@ -56,8 +58,6 @@ function routers(nav)
 })
       .post((req,res)=>{
     const {id,title,content,username,active} = req.body;
-    const url = 'mongodb://localhost:27017';
-    const dbName = 'postsApp';
 
     (async function addPost(){
         let client;
@@ -87,8 +87,6 @@ function routers(nav)
 
     adminRouter.route('/')
      .get((req,res)=>{
-         const url = 'mongodb://localhost:27017';
-         const dbName = 'postsApp';
               
          (async function mongo(){
                let client;

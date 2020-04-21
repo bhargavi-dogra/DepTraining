@@ -2,7 +2,7 @@ var express = require('express');
 const postsRouter = express.Router();
 const { MongoClient,ObjectID } = require('mongodb');
 const debug = require('debug')('app:postRoutes');
-
+const { url , dbName} = require('../config/dbconfig');
 
 function router(nav) {
    postsRouter.use((req,res,next)=>{
@@ -15,9 +15,6 @@ function router(nav) {
 
     postsRouter.route('/')
         .get((req, res) => {
-
-            const url = 'mongodb://localhost:27017';
-            const dbName = 'postsApp';
 
             (async function mongo() {
                 let client;
@@ -46,8 +43,6 @@ function router(nav) {
     postsRouter.route('/:id')
         .get((req, res) => {
             const { id } = req.params;
-            const url = 'mongodb://localhost:27017';
-            const dbName = 'postsApp';
 
             (async function mongo(){
                 let client;

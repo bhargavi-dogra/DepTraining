@@ -2,6 +2,7 @@ var express = require('express');
 const { MongoClient} = require('mongodb');
 const debug = require('debug')('app:authRoutes');
 const passport = require('passport');
+const { url , dbName} = require('../config/dbconfig');
 const authRouter =express.Router();
 
 function router(nav){
@@ -9,8 +10,6 @@ function router(nav){
     authRouter.route('/signUp')
       .post((req,res)=>{
     const {username,password} = req.body;
-    const url = 'mongodb://localhost:27017';
-    const dbName = 'postsApp';
 
     (async function addUser(){
         let client;
